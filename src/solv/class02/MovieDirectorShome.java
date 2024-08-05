@@ -1,4 +1,4 @@
-package solv;
+package solv.class02;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,8 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Main {
-	public static void main(String[] args) throws IOException {
+public class MovieDirectorShome {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int count = Integer.parseInt(br.readLine());
@@ -25,13 +26,5 @@ public class Main {
 		bw.flush();
 		bw.close();
 	}
-	public static boolean isPalindrome(String s) {
-        int len = s.length();
-        for (int i = 0; i < len / 2; i++) {
-            if (s.charAt(i) != s.charAt(len - 1 - i)) {
-                return false;
-            }
-        }
-        return true;
-    }
+	
 }
