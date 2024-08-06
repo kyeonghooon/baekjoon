@@ -17,8 +17,7 @@ public class MovieDirectorShome {
 		int num = 0;
 		while(check < count) {
 			num++;
-			String numStr = String.valueOf(num);
-			if (numStr.contains("666")) {
+			if (String.valueOf(num).contains("666")) {
 				check++;
 			}
 		}
