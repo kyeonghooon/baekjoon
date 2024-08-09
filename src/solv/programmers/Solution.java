@@ -1,4 +1,4 @@
-package solv;
+package solv.programmers;
 
 import java.util.HashMap;
 import java.util.Map;
