@@ -6,18 +6,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class n15680 {
+public class N30868 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n1 = Integer.parseInt(br.readLine());
-		br.close();
-		if (n1 == 0) {
-			bw.write("YONSEI");
-		} else {
-			bw.write("Leading the Way to the Future");
+		int count = Integer.parseInt(br.readLine());
+		for (int i = 0; i < count; i++) {
+			int n = Integer.parseInt(br.readLine());
+			int quotient = n / 5;
+			int remainder = n % 5;
+			for (int j = 0; j < quotient; j++) {
+				bw.write("++++ ");
+			}
+			for (int j = 0; j < remainder; j++) {
+				bw.write("|");
+			}
+			bw.newLine();
 		}
+		br.close();
 		bw.flush();
 		bw.close();
 	}

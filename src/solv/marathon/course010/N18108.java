@@ -6,14 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class n2558 {
+public class N18108 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n1 = Integer.parseInt(br.readLine());
-		int n2 = Integer.parseInt(br.readLine());
-		bw.write(n1 + n2 + "");
+		int bulgi = Integer.parseInt(br.readLine());
+		bw.write(bulgi - 543 + "");
 		bw.flush();
 		bw.close();
 	}

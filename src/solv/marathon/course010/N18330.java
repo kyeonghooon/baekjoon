@@ -5,25 +5,21 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 
-public class n11948 {
+public class N18330 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int[] scienceList = new int[4];
-		for (int i = 0; i < 4; i++) {
-			scienceList[i] = Integer.parseInt(br.readLine());
-		}
-		int[] socialList = new int[2];
-		for (int i = 0; i < 2; i++) {
-			socialList[i] = Integer.parseInt(br.readLine());
-		}
+		int use = Integer.parseInt(br.readLine());
+		int left = Integer.parseInt(br.readLine());
 		br.close();
-		Arrays.sort(scienceList);
-		int sum = scienceList[1] + scienceList[2] + scienceList[3] + Math.max(socialList[0], socialList[1]);
-		bw.write(sum + "");
+		int half = left + 60;
+		if (use > half) {
+			bw.write((half * 1500) + ((use - half) * 3000) + "");
+		} else {
+			bw.write(use * 1500 + "");
+		}
 		bw.flush();
 		bw.close();
 	}
