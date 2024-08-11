@@ -1,4 +1,4 @@
-package solv.class02;
+package solv.marathon.course010;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
