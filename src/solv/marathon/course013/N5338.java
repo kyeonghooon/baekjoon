@@ -1,4 +1,4 @@
-package solv.marathon.course13;
+package solv.marathon.course013;
 
 public class N5338 {
 
