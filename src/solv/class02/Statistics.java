@@ -1,4 +1,4 @@
-package solv.marathon.course014;
+package solv.class02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
