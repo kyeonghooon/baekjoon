@@ -1,32 +1,32 @@
 package solv;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int length = Integer.parseInt(br.readLine());
-		int[] list = new int[length];
-		String str = br.readLine();
-		for (int i = 0; i < list.length; i++) {
-			list[i] = str.charAt(i) - 'a' + 1;
-		}
-		int MOD = 1234567891;
-		long sum = 0;
-		int BASE = 31;
-		long power = 1;
-		for (int i = 0; i < list.length; i++) {
-			int value = str.charAt(i) - 'a' + 1;
-			sum = (sum + (value * power) % MOD) % MOD;
-			power = (power * BASE) % MOD;
-		}
-		bw.write(sum + "");
-		bw.flush();
-		bw.close();
+	public static void main(String[] args) {
+		Queue<Integer> queue = new PriorityQueue<>();
+		queue.add(9);
+		System.out.println(queue);
+		queue.add(1);
+		System.out.println(queue);
+		queue.add(3);
+		System.out.println(queue);
+		queue.add(2);
+		System.out.println(queue);
+		queue.add(4);
+		System.out.println(queue);
+		queue.add(7);
+		System.out.println(queue);
+		queue.add(8);
+		System.out.println(queue);
+		queue.add(5);
+		System.out.println(queue);
+		queue.add(6);
+		System.out.println(queue);
+		System.out.println("===========================================");
+		while (!queue.isEmpty()) {
+            System.out.print(queue.poll() + " ");
+        }
 	}
 }
