@@ -10,7 +10,8 @@ public class Test2 {
 
 
 	public static void main(String[] args) {
-		solution(2);
+		System.out.println('.' + '.'  + '.'  + '.');
+		System.out.println('*' + '*'  + '*'  + '*');
 	}
 
 	public static int[][] solution(int n) {
