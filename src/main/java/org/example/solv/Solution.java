@@ -5,39 +5,24 @@ import java.util.*;
 public class Solution {
 
 	public static void main(String[] args) {
-		System.out.println(solution(5));
+		System.out.println(solution(10000000));
 	}
 
-	static boolean[] visited;
-
-	public static int solution(int n) {
-		int ans = 0;
-		visited = new boolean[n + 1];
-		ans = bfs(n);
-		return ans;
-	}
-
-	public static int bfs(int n) {
-		int min = Integer.MAX_VALUE;
-		ArrayDeque<int[]> queue = new ArrayDeque<>();
-		queue.push(new int[]{n, 0});
-		while (!queue.isEmpty()) {
-			int[] cur = queue.poll();
-			int num = cur[0];
-			int count = cur[1];
-			visited[num] = true;
-			if (num == 0) {
-				min = Math.min(min, count);
-				continue;
-			}
-			if (num < 0) continue;
-			if (num % 2 == 0 && !visited[num / 2]) {
-				queue.push(new int[]{num / 2, count});
-			}
-			if (!visited[num - 1]) {
-				queue.push(new int[]{num - 1, count + 1});
-			}
+	public static String solution(int n) {
+		String s = String.valueOf(n);
+		int mod = s.length() % 3;
+		int size = s.length() / 3 + 1;
+		String[] list = new String[size];
+		list[0] = s.substring(0, mod);
+		for (int i = 0; i < size - 1; i++) {
+			list[i + 1] = s.substring(i * 3 + mod, (i + 1) * 3 + mod);
 		}
-		return min;
+		StringBuilder builder = new StringBuilder();
+		for (int i = 0; i < size; i++) {
+			builder.append(list[i]).append(".");
+		}
+		builder.deleteCharAt(builder.length() - 1);
+		return builder.toString();
 	}
+
 }
