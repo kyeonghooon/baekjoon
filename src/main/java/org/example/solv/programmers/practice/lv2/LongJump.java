@@ -1,4 +1,4 @@
-﻿package org.example.solv.programmers.lv2;
+package org.example.solv.programmers.practice.lv2;
 
 public class LongJump {
     public long solution(int n) {

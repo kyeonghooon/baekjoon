@@ -1,4 +1,4 @@
-package org.example.solv.programmers.lv2;
+package org.example.solv.programmers.montly_code_challenge.lv2;
 
 public class ArrayCut {
     public int[] solution(int n, long left, long right) {

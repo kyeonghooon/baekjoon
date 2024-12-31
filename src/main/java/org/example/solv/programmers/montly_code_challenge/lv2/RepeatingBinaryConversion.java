@@ -1,4 +1,4 @@
-package org.example.solv.programmers.lv2;
+package org.example.solv.programmers.montly_code_challenge.lv2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

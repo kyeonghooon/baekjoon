@@ -1,4 +1,4 @@
-package org.example.solv.programmers.lv2;
+package org.example.solv.programmers.greedy.lv2;
 
 import java.util.*;
 

@@ -4,25 +4,26 @@ import java.util.*;
 
 public class Solution {
 
-	public static void main(String[] args) {
-		System.out.println(solution(10000000));
-	}
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.solution(new String[]{"aya", "yee", "u", "maa", "wyeoo"}));
+    }
 
-	public static String solution(int n) {
-		String s = String.valueOf(n);
-		int mod = s.length() % 3;
-		int size = s.length() / 3 + 1;
-		String[] list = new String[size];
-		list[0] = s.substring(0, mod);
-		for (int i = 0; i < size - 1; i++) {
-			list[i + 1] = s.substring(i * 3 + mod, (i + 1) * 3 + mod);
-		}
-		StringBuilder builder = new StringBuilder();
-		for (int i = 0; i < size; i++) {
-			builder.append(list[i]).append(".");
-		}
-		builder.deleteCharAt(builder.length() - 1);
-		return builder.toString();
-	}
+    public int solution(String[] babbling) {
+        int answer = 0;
+        String[] corrects = {"aya", "ye", "woo", "ma"};
+        for (int i = 0; i < babbling.length; i++) {
+            String str = babbling[i];
+            for (int j = 0; j < 4; j++) {
+                if (str.contains(corrects[j])) {
+                    str = str.replace(corrects[j], ",");
+                }
+            }
+            if (str.replace(",", "").length() == 0) {
+                answer++;
+            }
+        }
+        return answer;
+    }
 
 }

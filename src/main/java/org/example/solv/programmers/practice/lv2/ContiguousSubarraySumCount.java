@@ -1,4 +1,4 @@
-﻿package org.example.solv.programmers.lv2;
+package org.example.solv.programmers.practice.lv2;
 
 import java.util.*;
 
