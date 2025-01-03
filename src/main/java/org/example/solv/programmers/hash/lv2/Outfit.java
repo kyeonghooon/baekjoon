@@ -1,4 +1,4 @@
-﻿package org.example.solv.programmers.hash.lv2;
+package org.example.solv.programmers.hash.lv2;
 
 import java.util.HashMap;
 
