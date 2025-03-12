@@ -1,4 +1,4 @@
-﻿package org.example.solv.programmers.heap.lv2;
+    package org.example.solv.programmers.heap.lv2;
 
 import java.util.PriorityQueue;
 
